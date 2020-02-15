@@ -1,0 +1,58 @@
+<table class="table table-striped">
+<h3>Create a new record </h3>
+<div  style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <th>
+        <div class="form-group" [hidden]="true">
+          <label for="name">id </label>
+          <input  type="number" class="form-control" id="userid" required [(ngModel)]="currentUser.id" name="userid" >
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+          <label for="name">First Name </label>
+          <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+            <label for="name">Last Name </label>
+            <input type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+            <label for="name">Description </label>
+            <input type="text" class="form-control" id="taskName" required [(ngModel)]="employee.taskName" name="taskName">
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+            <label for="name"> Start</label>
+            <input  type="text" class="form-control" id="timeFrom" required [(ngModel)]="employee.timeFrom" name="timeFrom">
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+            <label for="name">Finish </label>
+            <input type="text" class="form-control" id="timeTill" required [(ngModel)]="employee.timeTill" name="timeTill">
+        </div>
+    </th>
+    <th>
+        <div class="form-group">
+            <label for="name">Date </label>
+            <input type="Date" class="form-control" id="date" required [(ngModel)]="employee.date" name="date">
+        </div>
+    </th>
+    <th>
+        <label class="white">hidden</label>
+        <button type="submit" class="btn btn-success" (click)="gotoList()">Submit</button>
+    </th> 
+  </form>
+         
+</div>
+</table>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
+

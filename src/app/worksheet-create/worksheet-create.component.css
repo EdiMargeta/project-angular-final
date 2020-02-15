@@ -1,7 +1,9 @@
-p {
-    min-width:75px!important;
+input {
+    min-width:  100px!important;
     max-width:99.99%!important;
     transition: width 0.25s;
     text-align:center;
-    color:lightblue;
+  }
+  .white{
+      color: white;
   }
